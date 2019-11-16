@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header-wrap col-12 col-lg-12">
+      <div class="main-title">
+        <h1>國際貨幣每月匯率概況</h1>
+        <div class="hr"></div>
+      </div>
+    </header>
+  </div>
+  <% info.each do |info| %>
+  <div class="container">
+    <div class="month-wrap col-12 cpl-lg-12">
+      <div class="month-title" style="margin-top:20px;">
+        <h2>月份:<%= info[:月別] %></h2>
+      </div>
+    </div>
+  </div>
+  <div class="container article-wrap">
+    <div class="col-4 col-lg-12">
+      <article class="currency">
+        <ul>
+          <li class="bold li-title">幣別</li>
+          <li class="bold">新台幣</li>
+          <li class="bold">人民幣</li>
+          <li class="bold">日圓</li>
+          <li class="bold">韓元</li>
+          <li class="bold">新加坡幣</li>
+          <li class="bold">歐元</li>
+          <li class="bold">英鎊</li>
+          <li class="bold">澳幣</li>
+        </ul>
+      </article>
+    </div>
+    <div class="col-8 col-lg-12">
+      <article class="exchange-rate">
+        <ul>
+          <li class="bold li-title">匯率</li>
+          <li class="li-exchange"><%= info[:新台幣] %></li>
+          <li class="li-exchange"><%= info[:人民幣] %></li>
+          <li class="li-exchange"><%= info[:日圓] %></li>
+          <li class="li-exchange"><%= info[:韓元] %></li>
+          <li class="li-exchange"><%= info[:新加坡元] %></li>
+          <li class="li-exchange"><%= info[:歐元] %></li>
+          <li class="li-exchange"><%= info[:英鎊] %></li>
+          <li class="li-exchange"><%= info[:澳幣] %></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+  <%end%>
+</body>
+</html>
